@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>RYMEC Voice</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body><main>
+<section id="s0"><p class="sm">Faculty feedback</p><h1>Your voice matters</h1>
+<p>Your feedback helps improve teaching and learning. It takes about two minutes.</p>
+<button class="btn" onclick="go(1)">Start feedback</button><p class="sm">Your feedback is reviewed for academic improvement.</p></section>
+<section id="s1" class="hide"><div class="step"><i style="width:20%"></i></div><h2>Your details</h2>
+<label for="name">Full name</label><input id="name" autocomplete="name" placeholder="Enter your name">
+<label for="usn">USN / roll number</label><input id="usn" autocapitalize="characters" placeholder="1RY23CS001 or A52">
+<div class="sm">1st year without a USN? Use your section letter + number, like A52.</div>
+<label for="sem">Semester</label><select id="sem"></select>
+<label for="branch">Branch</label><select id="branch"></select>
+<label class="chk"><input type="checkbox" id="anon"><span>Hide my name from faculty<small>Faculty will not see your name or USN. The administrator can still see it.</small></span></label>
+<div class="err" id="e1"></div><button class="btn" onclick="next1()">Continue</button></section>
+<section id="s2" class="hide"><div class="step"><i style="width:40%"></i></div><h2>Select faculty</h2>
+<label for="dept">Department</label><select id="dept" onchange="fillFac()"><option value="">Loading…</option></select>
+<label for="fac">Faculty</label><select id="fac"><option value="">Select department first</option></select>
+<div class="err" id="e2"></div><button class="btn" onclick="next2()">Continue</button><button class="back" onclick="go(1)">Back</button></section>
+<section id="s3" class="hide"><div class="step"><i style="width:60%"></i></div><h2>Subject name</h2><p class="sm" id="fn"></p>
+<label for="sub">Which subject does this teacher teach you?</label>
+<input id="sub" list="dl" maxlength="60" placeholder="e.g. Data Structures" autocomplete="off"><datalist id="dl"></datalist>
+<div class="err" id="e3"></div><button class="btn" onclick="next3()">Continue</button><button class="back" onclick="go(2)">Back</button></section>
+<section id="s4" class="hide"><div class="step"><i style="width:80%"></i></div><h2>How would you rate the faculty?</h2>
+<div class="rate" id="rate"></div><div class="meaning" id="mean"></div>
+<label for="cm">Your feedback</label><textarea id="cm" rows="5" maxlength="500" placeholder="Write your thoughts, suggestions or improvements" oninput="cc.textContent=this.value.length+' / 500'"></textarea>
+<div class="sm" id="cc">0 / 500</div><div class="err" id="e4"></div>
+<button class="btn" id="sb" onclick="submit()">Submit feedback</button><button class="back" onclick="go(3)">Back</button></section>
+<section id="s5" class="hide done"><div class="tick">✓</div><h2>Feedback submitted</h2><p>Thank you for helping improve teaching and learning.</p></section>
+<p class="foot">Built with <span class="heart" role="img" aria-label="love"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#C6532B" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span> by <b>Viresh R</b> · II Year CSE A</p>
+</main><script src="app.js"></script></body></html>
