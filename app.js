@@ -1,4 +1,4 @@
-const API='https://script.google.com/macros/s/AKfycbyd8YHPGlBy71wieBP0JL3NtHNPiBK09wU5W4gkPzR0OjVoh4MOOkKQs0Fw5wE0Cyfr0w/exec';
+const API='PASTE_APPS_SCRIPT_URL_HERE';
 const M=['','Very Poor','Poor','Needs Improvement','Below Average','Average','Satisfactory','Good','Very Good','Excellent','Outstanding'];
 const BR=['Computer Science & Engineering','CSE (AI & Machine Learning)','CSE (Cyber Security)','CSE (Data Science)','Information Science & Engineering','Electronics & Communication Engineering','Electrical & Electronics Engineering','Mechanical Engineering','Civil Engineering'];
 let C={faculty:[],subjects:[]},S={rating:0},$=i=>document.getElementById(i);
